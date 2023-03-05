@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class BalokTabung {
 
     public static void main(String[] args) {
-        double panjang = 0, lebar = 0, tinggi = 0, jariJari = 0;
+        
+        double panjang, lebar, tinggi, jariJari;
         Scanner input = new Scanner(System.in);
         char ulangProgram = 'y', pilihan;
-        boolean ulangInput;
+        
         do {
             System.out.println("====================");
             System.out.println("    MENU PROGRAM");
@@ -20,36 +21,12 @@ public class BalokTabung {
             pilihan = input.next().charAt(0);
             switch (pilihan) {
                 case '1' -> {
-                    do {
-                        try {
-                            ulangInput = false;
-                            System.out.print("Panjang: ");
-                            panjang = input.nextDouble();
-                        } catch (Exception err) {
-                            System.out.println("Hanya Angka YGY");
-                            ulangInput = true;
-                        }
-                    } while ( ulangInput );
-                    do {
-                        try {
-                            ulangInput = false;
-                            System.out.print("Lebar: ");
-                            lebar = input.nextDouble();
-                        } catch (Exception err) {
-                            System.out.println("Hanya Angka YGY");
-                            ulangInput = true;
-                        }
-                    } while ( ulangInput );
-                    do {
-                        try {
-                            ulangInput = false;
-                            System.out.print("Tinggi: ");
-                            tinggi = input.nextDouble();
-                        } catch (Exception err) {
-                            System.out.println("Hanya Angka YGY");
-                            ulangInput = true;
-                        }
-                    } while ( ulangInput );
+                    System.out.print("Panjang: ");
+                    panjang = input.nextDouble();
+                    System.out.print("Lebar: ");
+                    lebar = input.nextDouble();
+                    System.out.print("Tinggi: ");
+                    tinggi = input.nextDouble();
                     Balok menghitungBalok = new Balok(panjang, lebar, tinggi);
                     System.out.println("Keliling Persegi Panjang: " + menghitungBalok.getKeliling());
                     System.out.println("Luas Persegi Panjang: " + menghitungBalok.getLuas());
@@ -57,28 +34,13 @@ public class BalokTabung {
                     System.out.println("Luas Permukaan Balok: " + menghitungBalok.luasPermukaan());
                 }
                 case '2' -> {
-                    do {
-                        try {
-                            ulangInput = false;
-                            System.out.print("Jari-Jari: ");
-                            jariJari = input.nextDouble();
-                        } catch (Exception err) {
-                            System.out.println("Hanya Angka YGY");
-                            ulangInput = true;
-                        }
-                    } while ( ulangInput );
-                    do {
-                        try {
-                            ulangInput = false;
-                            System.out.print("Tinggi: ");
-                            tinggi = input.nextDouble();
-                        } catch (Exception err) {
-                            System.out.println("Hanya Angka YGY");
-                            ulangInput = true;
-                        }
-                    } while ( ulangInput );
+                    System.out.print("Jari-Jari: ");
+                    jariJari = input.nextDouble();
+                    System.out.print("Tinggi: ");
+                    tinggi = input.nextDouble();
                     Tabung menghitungTabung = new Tabung(jariJari, tinggi);
                     System.out.println("Luas Alas Tabung: " + menghitungTabung.getLuas());
+                    System.out.println("Keliling Alas Tabung: " + menghitungTabung.getKeliling());
                     System.out.println("Luas Permukaan Tabung: " + menghitungTabung.luasPermukaan());
                     System.out.println("Volume Tabung: " + menghitungTabung.volume());
                 }
