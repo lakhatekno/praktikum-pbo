@@ -20,7 +20,9 @@ public class Balok extends PersegiPanjang {
         return luasPersegiPanjang() * tinggi;
     }
     
-    public double kelilingBalok() {
-        return (2 * tinggi * kelilingPersegiPanjang()) * 2;
+    public double luasBalok() {
+        PersegiPanjang sisi2 = new PersegiPanjang(lebar, tinggi);
+        PersegiPanjang sisi3 = new PersegiPanjang(panjang, tinggi);
+        return (sisi2.luasPersegiPanjang() + sisi3.luasPersegiPanjang() + super.luasPersegiPanjang()) * 2;
     }
 }

@@ -218,7 +218,7 @@ public class Kalkulator extends javax.swing.JFrame {
         fieldLuasPersegiPanjang.setText(String.valueOf(hitungBalok.luasPersegiPanjang()));
         fieldKelilingPersegiPanjang.setText(String.valueOf(hitungBalok.kelilingPersegiPanjang()));
         fieldVolumeBalok.setText(String.valueOf(hitungBalok.volumeBalok()));
-        fieldKelilingBalok.setText(String.valueOf(hitungBalok.kelilingBalok()));
+        fieldKelilingBalok.setText(String.valueOf(hitungBalok.luasBalok()));
     }//GEN-LAST:event_buttonHitungActionPerformed
 
     private void buttonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonResetActionPerformed
