@@ -14,7 +14,7 @@ public class Penilaian {
     public Penilaian(String lomba,
             int nilai1,
             int nilai2,
-            int nilai,
+            int nilai3,
             int nilai4) {
         this.nilai1 = nilai1;
         this.nilai2 = nilai2;
